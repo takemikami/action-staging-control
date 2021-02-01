@@ -1,0 +1,26 @@
+{
+  "name": "action-staging-control",
+  "description": "",
+  "version": "1.0.0",
+  "author": "Mikami, Takeshi",
+  "license": "MIT",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "ncc build -o dist src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/takemikami/action-staging-control.git"
+  },
+  "bugs": {
+    "url": "https://github.com/takemikami/action-staging-control/issues"
+  },
+  "homepage": "https://github.com/takemikami/action-staging-control#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/github": "^4.0.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.24.1"
+  }
+}

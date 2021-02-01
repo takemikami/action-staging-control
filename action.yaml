@@ -1,0 +1,30 @@
+name: 'Staging Control'
+description: 'Deployment control for staging with GitHub pull request'
+inputs:
+  github-token:
+    description: The GitHub token used to create an authenticated client
+    default: ${{ github.token }}
+    required: false
+  step:
+    description: A step name, 'check-deployable' or 'apply-status'
+    required: true
+  deploy-outcome:
+    description: A result of deployment, Required when step is 'apply-status'.
+    required: false
+  label-name:
+    description: A label name of staging deployment control
+    default: staging
+  check-name:
+    description: A context name of staging deployment status check
+    default: staging
+  debug:
+    description: Whether to tell the GitHub client to log details of its requests
+    default: false
+  user-agent:
+    description: An optional user-agent string
+    default: takemikami/actions-staging-control
+  previews:
+    description: A comma-separated list of API previews to accept
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
