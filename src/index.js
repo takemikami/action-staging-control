@@ -46,7 +46,7 @@ async function run() {
           number: prNumber
         }
       )).repository.pullRequest.labels
-      const labeled = prLabels.nodes.filter(x => x.name=labelName).length > 0
+      const labeled = prLabels.nodes.filter(x => x.name==labelName).length > 0
       if (!labeled) {
         console.log('#' + prNumber + ' do NOT have label: ' + labelName)
       }
